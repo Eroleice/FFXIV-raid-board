@@ -1,0 +1,310 @@
+<html>
+<style>
+html {
+	font-size: 12px;
+	color: white;
+	text-shadow: .1rem 0rem .3rem blue,-.1rem 0rem .3rem blue,0rem .1rem .3rem blue,0rem -.1rem .3rem blue;
+}
+table {
+	width: 100%;
+	border:1px solid white;
+	font-size: 12px;
+}
+td {
+	text-align: center;
+	border:1px solid white;
+}
+td:hover{
+	background-color: black;
+}
+.position table{
+	border: 0px;
+}
+.position td{
+	border: 0px;
+}
+.timeline {
+	margin-left: 10px;
+}
+.button {
+	cursor: pointer;
+}
+</style>
+<body>
+<table id='p1'>
+	<tbody>
+		<tr>
+			<td colspan="2" class="button" onclick="phase('p1')" style="width:100%;">P1</td>
+		</tr>
+		<tr>
+			<td style="width:45%">
+				<div class='position'>
+					<table>
+						<tr>
+							<td style="width:33%">D3</td><td style="width:33%">MT</td><td style="width:33%">D4</td>
+ 						</tr>
+						<tr>
+							<td style="width:33%">ST</td><td style="width:33%">BOSS</td><td style="width:33%">D2</td>
+						</tr>
+						<tr>
+							<td style="width:33%">H1</td><td style="width:33%">D1</td><td style="width:33%">H2</td>
+						</tr>
+					</table>
+				</div>
+			</td>
+			<td style="width:55%;text-align:left;">
+				<div class="timeline">
+					■ 2连暗影扩散<br>
+					■ 2连失信<br>
+					■ 死刑（MT无敌）<br>
+					■ 镜子/黑球<br>
+					■ 背信<br>
+					■ 黑球/镜子<br>
+					■ 2连暗影扩散<br>
+					■ 2连失信<br>
+					■ 死刑（换T）<br>
+					■ 10%转阶段
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="button" colspan="2" onclick="phase('p2');" style="width:100%;">点击进入P2</td>
+		</tr>
+	</tbody>
+</table>
+<table id='p2' style="display:none">
+	<tbody>
+		<tr>
+			<td colspan="2" class="button" onclick="phase('p1')" style="width:100%;">P2</td>
+		</tr>
+		<tr>
+			<td style="width:45%">
+				<div class='position'>
+					<table>
+						<tr>
+							<td style="width:33%">D</td><td style="width:33%">D</td><td style="width:33%">MT</td>
+ 						</tr>
+						<tr>
+							<td style="width:33%"> </td><td style="width:33%">BOSS</td><td style="width:33%"> </td>
+						</tr>
+						<tr>
+							<td style="width:33%">ST</td><td style="width:33%">D</td><td style="width:33%">D</td>
+						</tr>
+					</table>
+				</div>
+			</td>
+			<td rowspan="2" style="width:55%;text-align:left;">
+				<div class="timeline">
+					■ 双T踩塔（4塔）<br>
+					■ DPS引导连线<br>
+					■ 左右分摊+双T远离
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:45%">
+				<div class='position'>
+					<table>
+						<tr>
+							<td style="width:50%">D1/D3/H1</td><td style="width:50%">D2/D4/H2</td>
+ 						</tr>
+					</table>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="button" colspan="2" onclick="phase('p3');" style="width:100%;">点击进入P3</td>
+		</tr>
+	</tbody>
+</table>
+<table id='p3' style="display:none">
+	<tbody>
+		<tr>
+			<td colspan="2" class="button" onclick="phase('p2')" style="width:100%;">P3</td>
+		</tr>
+		<tr>
+			<td style="width:45%">
+				<div class='position'>
+					<table>
+						<tr>
+							<td colspan="2">坦克接线</td>
+ 						</tr>
+						<tr>
+							<td style="width:50%">火Buff坦</td><td style="width:50%">冰Buff坦</td>
+						</tr>
+						<tr>
+							<td colspan="2">治疗接线</td>
+						</tr>
+					</table>
+				</div>
+			</td>
+			<td style="width:55%;text-align:left;">
+				<div class="timeline">
+					■ 冰火魔法阵<br>
+					■ 连线+坦克死刑<br>
+					■ 冰火魔法阵<br>
+					■ 2连死刑
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="button" colspan="2" onclick="phase('p4');" style="width:100%;">点击进入P4</td>
+		</tr>
+	</tbody>
+</table>
+<table id='p4' style="display:none">
+	<tbody>
+		<tr>
+			<td colspan="2" class="button" onclick="phase('p3')" style="width:100%;">P4</td>
+		</tr>
+		<tr>
+			<td style="width:45%">
+				<div class='position'>
+					<table>
+						<tr>
+							<td colspan="3">D4/MT</td>
+ 						</tr>
+						<tr>
+							<td style="width:33%">D3/H1</td><td style="width:33%">BOSS</td><td style="width:33%">H2/D2</td>
+						</tr>
+						<tr>
+							<td colspan="3">D1/ST</td>
+						</tr>
+					</table>
+				</div>
+			</td>
+			<td rowspan="2" style="width:55%;text-align:left;">
+				<div class="timeline">
+					■ 法则变更（奶TH）<br>
+					■ 枯萎病（aoe流血）<br>
+					■ 死刑（ST无敌）<br>
+					■ 左右分摊<br>
+					■ 暗影核爆<br>
+					■ 古火爆发<br>
+					■ 2连暗影核爆
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:45%">
+				<div class='position'>
+					<table>
+						<tr>
+							<td style="width:50%;">D1/D3<br>H1/ST</td><td style="width:50%">D2/D4<br>H2/MT</td>
+ 						</tr>
+					</table>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="button" colspan="2" onclick="phase('p5');" style="width:100%;">点击进入P5</td>
+		</tr>
+	</tbody>
+</table>
+<table id='p5' style="display:none">
+	<tbody>
+		<tr>
+			<td colspan="2" class="button" onclick="phase('p4')" style="width:100%;">P5</td>
+		</tr>
+		<tr>
+			<td style="width:45%">
+				<div class='position'>
+					<table>
+						<tr>
+							<td style="width:33%">H1</td><td style="width:33%">MT</td><td style="width:33%"> </td>
+ 						</tr>
+						<tr>
+							<td style="width:33%"> </td><td style="width:33%"> </td><td style="width:33%"> </td>
+						</tr>
+						<tr>
+							<td style="width:33%"> </td><td style="width:33%">ST</td><td style="width:33%">H2</td>
+						</tr>
+					</table>
+				</div>
+			</td>
+			<td rowspan="3" style="width:55%;text-align:left;">
+				<div class="timeline">
+					■ 尊严王（踩塔+囚禁）<br>
+					■ 殉道者（击退分担）<br>
+					■ 祭祀（3连分摊诱导）<br>
+					■ 中间/两侧AOE<br>
+					■ 两侧/中间AOE
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:45%">
+				<div class='position'>
+					<table>
+						<tr>
+							<td style="width:33%">D1</td><td style="width:33%"> </td><td style="width:33%">D2</td>
+ 						</tr>
+						<tr>
+							<td style="width:33%">ST/H1</td><td style="width:33%"> </td><td style="width:33%">MT/H2</td>
+						</tr>
+						<tr>
+							<td style="width:33%">D3</td><td style="width:33%"> </td><td style="width:33%">D4</td>
+						</tr>
+					</table>
+				</div>
+			</td>
+		</tr>
+				<tr>
+			<td style="width:45%">
+				<div class='position'>
+					<table>
+						<tr>
+							<td style="width:50%">D1/H1/ST</td><td style="width:50%">D2/H2/MT</td>
+ 						</tr>
+						<tr>
+							<td style="width:50%">D3</td><td style="width:50%">D4</td>
+						</tr>
+					</table>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="button" colspan="2" onclick="phase('p7');" style="width:100%;">点击进入P7</td>
+		</tr>
+	</tbody>
+</table>
+<table id='p7' style="display:none">
+	<tbody>
+		<tr>
+			<td colspan="2" class="button" onclick="phase('p5')" style="width:100%;">P7</td>
+		</tr>
+		<tr>
+			<td style="width:45%">
+				<div class='position'>
+					<table>
+						<tr>
+							<td style="width:50%">ST</td><td style="width:50%">MT</td>
+ 						</tr>
+					</table>
+				</div>
+			</td>
+			<td style="width:55%;text-align:left;">
+				<div class="timeline">
+					■ 地火<br>
+					■ 踩塔AOE<br>
+					■ 地火<br>
+					■ 踩塔AOE<br>
+					■ 读条狂暴
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+<script>
+function phase(p){
+	document.getElementById("p1").style.display="none";
+	document.getElementById("p2").style.display="none";
+	document.getElementById("p3").style.display="none";
+	document.getElementById("p4").style.display="none";
+	document.getElementById("p5").style.display="none";
+	document.getElementById("p7").style.display="none";
+	document.getElementById(p).style.display="";
+}
+</script>
+</html>
