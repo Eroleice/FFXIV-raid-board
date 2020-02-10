@@ -298,6 +298,8 @@ addOverlayListener('onLogEvent', function(e) {
 		phase('p7');
 	} else if (e.detail.logs[i].match('40000012')) {
 		phase('p1');
+	} else if (e.detail.logs[i].match('\u4efb\u52a1\u7ed3\u675f\u4e86')) {
+		phase('p1');
 	}
   }
 });
