@@ -226,18 +226,29 @@ td:hover{
 					</table>
 				</div>
 			</td>
-			<td style="width:55%;text-align:left;">
+			<td rowspan="2" style="width:55%;text-align:left;">
 				<div class="timeline">
 					■ AOE<br>
 					■ 复仇/混沌<br>
-					■ 复仇/混沌<br>
+					■ 混沌/复仇<br>
 					■ AOE<br>
 					■ 复仇/混沌<br>
 					■ AOE * 4<br>
-					■ AOE狂暴<br>
-					■ <br>
-					■ 复仇：近散侧<br>
-					■ 混沌：侧近散<br>			
+					■ AOE狂暴
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:45%">
+				<div class='position'>
+					<table>
+						<tr>
+							<td style="width:100%">复仇：近 - 散 - 侧</td>
+ 						</tr>
+						<tr>
+							<td style="width:100%">混沌：侧 - 近 - 散</td>
+						</tr>
+					</table>
 				</div>
 			</td>
 		</tr>
@@ -258,7 +269,7 @@ addOverlayListener('onLogEvent', function(e) {
     } else if (stage === "p1" && e.detail.logs[i].match('\u88ab\u5149\u8292\u6240\u8ff7\u60d1\u7684\u5bb6\u4f19')) {
 		phase('p2');
 		stage = "p2";
-	} else if (stage === "p2" && e.detail.logs[i].match('\u638c\u7ba1\u6df7\u6c8c\u7684\u6697\u4e4b\u529b'))) {
+	} else if (stage === "p2" && e.detail.logs[i].match('\u638c\u7ba1\u6df7\u6c8c\u7684\u6697\u4e4b\u529b')) {
 		phase('p3');
 		stage = "p3";
 	} else if (e.detail.logs[i].match('40000012')) {
