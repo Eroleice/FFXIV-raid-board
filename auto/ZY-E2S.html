@@ -255,13 +255,16 @@ addOverlayListener('onLogEvent', function(e) {
     if (e.detail.logs[i].match('\u53ef\u6076\u7684\u5149\u4e4b\u529b')) {
 		phase('p1');
 		stage = "p1";
-    } else if (stage === "p1" || e.detail.logs[i].match('\u88ab\u5149\u8292\u6240\u8ff7\u60d1\u7684\u5bb6\u4f19')) {
+    } else if (stage === "p1" && e.detail.logs[i].match('\u88ab\u5149\u8292\u6240\u8ff7\u60d1\u7684\u5bb6\u4f19')) {
 		phase('p2');
 		stage = "p2";
-	} else if (stage === "p2" || e.detail.logs[i].match('\u638c\u7ba1\u6df7\u6c8c\u7684\u6697\u4e4b\u529b'))) {
+	} else if (stage === "p2" && e.detail.logs[i].match('\u638c\u7ba1\u6df7\u6c8c\u7684\u6697\u4e4b\u529b'))) {
 		phase('p3');
 		stage = "p3";
 	} else if (e.detail.logs[i].match('40000012')) {
+		phase('p1');
+		stage = "p1";
+	} else if (e.detail.logs[i].match('\u4efb\u52a1\u7ed3\u675f\u4e86')) {
 		phase('p1');
 		stage = "p1";
 	}
