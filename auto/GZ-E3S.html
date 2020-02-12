@@ -235,6 +235,7 @@ td:hover{
 					■ 圆T去后场角落<br>
 					■ 浪T中场向前击退<br>
 					■ 浪T向前 圆T爆炸<br>
+					■ 龙王2连喷水<br>
 					■ 2连AOE<br>
 					■ 死刑（MT无敌）
 				</div>
@@ -299,16 +300,16 @@ addOverlayListener('onLogEvent', function(e) {
     } else if (stage === "p1" && e.detail.logs[i].match('\u5c55\u73b0\u4f60\u72c2\u66b4\u7684\u4e00\u9762\u5427')) {
 		phase('p2');
 		stage = "p2";
-	} else if (stage === "p2" && e.detail.logs[i].match('\u89c9\u9192\u4e4b\u65f6\u6765\u4e34'))) {
+	} else if (stage === "p2" && e.detail.logs[i].match('\u89c9\u9192\u4e4b\u65f6\u6765\u4e34')) {
 		phase('p3');
 		stage = "p3";
-	} else if (stage === "p3" && e.detail.logs[i].match('\u6d77\u6d6a\u4ece\u65e0\u505c\u6ede'))) {
+	} else if (stage === "p3" && e.detail.logs[i].match('\u6d77\u6d6a\u4ece\u65e0\u505c\u6ede')) {
 		phase('p4');
 		stage = "p4";
-	} else if (stage === "p4" && e.detail.logs[i].match('\u6f6e\u6da8\u6f6e\u843d\u4e43\u662f\u5927\u6d77'))) {
-		phase('p4');
-		stage = "p4";
-	} else if (stage === "p5" && e.detail.logs[i].match('\u5267\u70c8\u6ce2\u52a8'))) {
+	} else if (stage === "p4" && e.detail.logs[i].match('\u6f6e\u6da8\u6f6e\u843d\u4e43\u662f\u5927\u6d77')) {
+		phase('p5');
+		stage = "p5";
+	} else if (stage === "p5" && e.detail.logs[i].match('\u5267\u70c8\u6ce2\u52a8')) {
 		phase('p6');
 		stage = "p6";
 	} else if (e.detail.logs[i].match('40000012')) {
@@ -327,6 +328,9 @@ function phase(p){
 	document.getElementById("p1").style.display="none";
 	document.getElementById("p2").style.display="none";
 	document.getElementById("p3").style.display="none";
+	document.getElementById("p4").style.display="none";
+	document.getElementById("p5").style.display="none";
+	document.getElementById("p6").style.display="none";
 	document.getElementById(p).style.display="";
 }
 </script>
