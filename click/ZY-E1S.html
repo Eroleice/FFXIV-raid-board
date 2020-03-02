@@ -267,26 +267,7 @@ td:hover{
 <script>
 'use strict';
 
-var stage = "p1";
-
-addOverlayListener('onLogEvent', function(e) {
-  for (let i = 0; i < e.detail.logs.length; i++) {
-    if (stage === "p1" && e.detail.logs[i].match('\u6781\u5927\u7206\u70b8')) {
-		phase('p2');
-    } else if (stage === "p2" && e.detail.logs[i].match('\u8fdb\u884c\u6c38\u6052\u5410\u606f\u7684\u53d1\u52a8')) {
-		phase('p3');
-	} else if (e.detail.logs[i].match('40000012')) {
-		phase('p1');
-	} else if (e.detail.logs[i].match('\u4efb\u52a1\u7ed3\u675f\u4e86')) {
-		phase('p1');
-	}
-  }
-});
-
-callOverlayHandler({ call: 'cactbotRequestState' });
-
 function phase(p){
-	stage = p;
 	document.getElementById("p1").style.display="none";
 	document.getElementById("p2").style.display="none";
 	document.getElementById("p3").style.display="none";
