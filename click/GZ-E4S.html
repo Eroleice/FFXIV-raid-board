@@ -1,0 +1,260 @@
+<html>
+<style>
+html {
+	font-size: 12px;
+	color: white;
+	text-shadow: .1rem 0rem .3rem blue,-.1rem 0rem .3rem blue,0rem .1rem .3rem blue,0rem -.1rem .3rem blue;
+}
+table {
+	width: 100%;
+	border:1px solid white;
+	font-size: 12px;
+}
+td {
+	text-align: center;
+	border:1px solid white;
+}
+td:hover{
+	background-color: black;
+}
+.position table{
+	border: 0px;
+}
+.position td{
+	border: 0px;
+}
+.timeline {
+	margin-left: 10px;
+}
+</style>
+<body>
+<table id='p1' style="display:;">
+	<tbody>
+		<tr>
+			<td colspan="2" style="width:100%;">P1</td>
+		</tr>
+		<tr>
+			<td style="width:45%">
+				<div class='position'>
+					<table>
+						<tr>
+							<td colspan="4" style="width:100%">黄标记</td>
+						</tr>
+						<tr>
+							<td style="width:25%">D3</td><td style="width:25%">MT</td><td style="width:25%">ST</td><td style="width:25%">D4</td>
+ 						</tr>
+						<tr>
+							<td style="width:25%">H1</td><td style="width:25%">D1</td><td style="width:25%">D2</td><td style="width:25%">H2</td>
+ 						</tr>
+					</table>
+				</div>
+			</td>
+			<td rowspan="2"  style="width:55%;text-align:left;">
+				<div class="timeline">
+					■ 死刑（MT无敌）<br>
+					■ 流沙+黄标记（散）<br>
+					■ 双花扩散AOE<br>
+					■ 橙标记（合）<br>
+					■ 魔法AOE<br>
+					■ 击退（防击退）<br>
+					-----------拳套----------<br>
+					■ Boss身下躲->侧<br>
+					■ Boss拉回中（AOE）<br>
+					■ T字冲拳（余震）<br>
+					■ 半屏冲拳<br>
+					■ 十/X炸弹（冲拳侧躲）<br>
+					--------------------------<br>
+					■ 陨石（T奶AB）<br>
+					■ 躲地震波+AC穿中<br>
+					■ AOE<br>
+					■ 死刑（ST无敌）<br>
+					■ 击退（不防）<br>
+					-----------坦克----------<br>
+					■ Boss侧躲->穿余震<br>
+					■ 橙标T嘲讽吃冲锋<br>
+					■ 月环+黄标记（散）<br>
+					■ Boss侧躲->穿余震<br>
+					--------------------------
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:45%">
+				<div class='position'>
+					<table>
+						<tr>
+							<td colspan="4" style="width:100%">冲击</td>
+						</tr>
+						<tr>
+							<td style="width:25%">BOSS</td><td style="width:25%">D</td><td style="width:25%">T</td><td style="width:25%">H</td>
+ 						</tr>
+					</table>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="button" colspan="2" onclick="phase('p2');" style="width:100%;">点击进入p2</td>
+		</tr>
+	</tbody>
+</table>
+<table id='p2' style="display:none;">
+	<tbody>
+		<tr>
+			<td colspan="2" style="width:100%;">P2</td>
+		</tr>
+		<tr>
+			<td style="width:45%">
+				<div class='position'>
+					<table>
+						<tr>
+							<td colspan="4" style="width:100%">高低地</td>
+						</tr>
+						<tr>
+							<td style="width:25%;background:rgba(0,0,255,.5);">D</td><td style="width:25%;background:rgba(0,0,255,.5);"> </td><td style="width:25%;background:rgba(255,0,0,.5);"> </td><td style="width:25%">D</td>
+ 						</tr>
+						<tr>
+							<td style="width:25%;background:rgba(0,0,255,.5);"> </td><td style="width:25%;background:rgba(0,0,255,.5);"> </td><td style="width:25%;background:rgba(255,255,0,.5);">D</td><td style="width:25%;background:rgba(255,255,0,.5);">D</td>
+ 						</tr>
+						<tr>
+							<td style="width:25%;background:rgba(255,0,0,.5);"> </td><td style="width:25%;background:rgba(255,127,0,.5);">D/T</td><td style="width:25%;background:rgba(0,0,255,.5);"> </td><td style="width:25%;background:rgba(0,0,255,.5);"> </td>
+ 						</tr>
+						<tr>
+							<td style="width:25%">T</td><td style="width:25%;background:rgba(255,0,0,.5);"> </td><td style="width:25%;background:rgba(0,0,255,.5);"> </td><td style="width:25%;background:rgba(0,0,255,.5);">H</td>
+ 						</tr>
+					</table>
+				</div>
+			</td>
+			<td rowspan="4" style="width:55%;text-align:left;">
+				<div class="timeline">
+					■ 大地之怒（AOE）<br>
+					■ 2连冲拳+流沙<br>
+					■ 蓝拳（防击退）<br>
+					■ 蓝标右上 T死刑后分摊<br>
+					■ 高低地板 蓝标横向下去<br>
+					■ 中场集合刷血AOE<br>
+					■ 奶妈石牢<br>
+					■ 场地复原+5段AOE<br>
+					■ 蓝拳（防击退）<br>
+					■ 蓝标右上 T死刑<br>
+					■ 2连冲拳+花<br>
+					■ 高低地板 治疗石牢<br>
+					■ 蓝标横向下去角落<br>
+					■ 蓝标角落 橙标下去<br>
+					■ 中场集合刷血AOE<br>
+					■ 场地复原+5段AOE<br>
+					■ 2拳破半场+标记<br>
+					■ AOE恢复场地
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:45%">
+				<div class='position'>
+					<table>
+						<tr>
+							<td style="width:100%">单侧拳：花前我后，花后我前，躲拳穿花</td>
+ 						</tr>
+						<tr>
+							<td style="width:100%">双侧拳：花前我后，花后我前，先拳后花</td>
+ 						</tr>
+					</table>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:45%">
+				<div class='position'>
+					<table>
+						<tr>
+							<td colspan="2" style="width:50%">前</td><td colspan="2" style="width:50%">后</td>
+						</tr>
+						<tr>
+							<td style="width:25%">MT</td><td style="width:25%">D2</td><td style="width:25%">ST</td><td style="width:25%">D1</td>
+ 						</tr>
+						<tr>
+							<td style="width:25%">D1</td><td style="width:25%">H1</td><td style="width:25%">D2</td><td style="width:25%">H2</td>
+ 						</tr>
+					</table>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:45%">
+				<div class='position'>
+					<table>
+						<tr>
+							<td colspan="4" style="width:100%">半场标记</td>
+						</tr>
+						<tr>
+							<td style="width:25%;background:rgba(255,255,0,.5);">T</td><td style="width:25%;background:rgba(255,127,0,.5);">合</td><td style="width:25%;background:rgba(0,0,255,.5);"> </td><td style="width:25%;background:rgba(0,0,255,.5);"> </td>
+ 						</tr>
+						<tr>
+							<td style="width:25%;background:rgba(255,255,0,.5);">D</td><td style="width:25%;background:rgba(255,255,0,.5);">H</td><td style="width:25%;background:rgba(0,0,255,.5);"> </td><td style="width:25%;background:rgba(0,0,255,.5);">D</td>
+ 						</tr>
+					</table>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="button" colspan="2" onclick="phase('p3');" style="width:100%;">点击进入p3</td>
+		</tr>
+	</tbody>
+</table>
+<table id='p3' style="display:none;">
+	<tbody>
+		<tr>
+			<td colspan="2" style="width:100%;">P3</td>
+		</tr>
+		<tr>
+			<td style="width:45%">
+				<div class='position'>
+					<table>
+						<tr>
+							<td colspan="3" style="width:100%">转圈流沙</td>
+						</tr>
+						<tr>
+							<td style="width:33%">D2/ST</td><td style="width:33%">橙</td><td style="width:33%">D1/MT</td>
+ 						</tr>
+					</table>
+				</div>
+			</td>
+			<td style="width:55%;text-align:left;">
+				<div class="timeline">
+					■ AOE流血<br>
+					■ 流沙（顺时针5连）<br>
+					■ 蓝拳（防击退）<br>
+					■ 蓝标右上 T死刑<br>
+					■ AOE<br>
+					■ 5连AOE<br>
+					■ AOE流血<br>
+					■ 流沙（顺时针5连）<br>
+					■ 2连冲拳<br>
+					■ 死刑（ST无敌）<br>
+					■ 双T分摊死刑<br>
+					■ 流沙（顺时针5连）<br>
+					■ 2连冲拳<br>
+					■ AOE-5连-AOE-5连-AOE<br>
+					■ 狂暴
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="button" colspan="2" onclick="phase('p1');" style="width:100%;">点击返回P1</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+<script src="./resources/common.js"></script>
+<script>
+'use strict';
+
+callOverlayHandler({ call: 'cactbotRequestState' });
+
+function phase(p){
+	document.getElementById("p1").style.display="none";
+	document.getElementById("p2").style.display="none";
+	document.getElementById("p3").style.display="none";
+	document.getElementById(p).style.display="";
+}
+</script>
+</html>
