@@ -309,34 +309,9 @@ td:hover{
 <script>
 'use strict';
 
-var stage = "p1";
-
-addOverlayListener('onLogEvent', function(e) {
-  for (let i = 0; i < e.detail.logs.length; i++) {
-    if (e.detail.logs[i].match('\u4ece\u6d88\u5931\u7684\u6c34\u5e95\u800c\u6765')) {
-		phase('p1');
-    } else if (stage === "p1" && e.detail.logs[i].match('\u5c55\u73b0\u4f60\u72c2\u66b4\u7684\u4e00\u9762\u5427')) {
-		phase('p2');
-	} else if (stage === "p2" && e.detail.logs[i].match('\u89c9\u9192\u4e4b\u65f6\u6765\u4e34')) {
-		phase('p3');
-	} else if (stage === "p3" && e.detail.logs[i].match('\u6d77\u6d6a\u4ece\u65e0\u505c\u6ede')) {
-		phase('p4');
-	} else if (stage === "p4" && e.detail.logs[i].match('\u6f6e\u6da8\u6f6e\u843d\u4e43\u662f\u5927\u6d77')) {
-		phase('p5');
-	} else if (stage === "p5" && e.detail.logs[i].match('\u5267\u70c8\u6ce2\u52a8')) {
-		phase('p6');
-	} else if (e.detail.logs[i].match('40000012')) {
-		phase('p1');
-	} else if (e.detail.logs[i].match('\u4efb\u52a1\u7ed3\u675f\u4e86')) {
-		phase('p1');
-	}
-  }
-});
-
 callOverlayHandler({ call: 'cactbotRequestState' });
 
 function phase(p){
-	stage = p;
 	document.getElementById("p1").style.display="none";
 	document.getElementById("p2").style.display="none";
 	document.getElementById("p3").style.display="none";
